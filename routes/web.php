@@ -12,8 +12,10 @@ Mempelajari tentang Post model pada belajar laravel 8 Episode 7
 <?php
 
 use App\Http\Controllers\PostController;
+use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -44,5 +46,22 @@ Route::get('/about', function () {
 
 Route::get('/blog', [PostController::class, 'index']);
 
-// halaman single post
+// mengarah ke single post
 Route::get('posts/{post:slug}', [PostController::class, 'show']);
+
+// mengarah ke categories
+Route::get('/categories', function (Category $category) {
+    return view('categories', [
+        'title' => 'Post Categories',
+        'categories' => Category::all()
+    ]);
+});
+
+// mengarah ke kategori
+Route::get('/categories/{category:slug}', function (Category $category) {
+    return view('category', [
+        'title' => $category->name,
+        'posts' => $category->posts,
+        'category' => $category->name
+    ]);
+});
