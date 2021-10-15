@@ -4,7 +4,7 @@ Muhammad Zhafir Sunandy Pramana
 193040135
 https://github.com/Zhafirsp/prakweb2021_phpmvc_193040135
 Pertemuan 6 - 15 Oktover 2021
-Mempelajari tentang Post model pada belajar laravel 8 Episode 7
+Mempelajari tentang Post Category & Eloquent Relationship pada belajar laravel 8 Episode 8
 */
 ?>
 
