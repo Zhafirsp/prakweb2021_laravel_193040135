@@ -1,6 +1,13 @@
 <?php
-//
+/*
+Muhammad Zhafir Sunandy Pramana
+193040135
+https://github.com/Zhafirsp/prakweb2021_phpmvc_193040135
+Pertemuan 6 - 15 Oktover 2021
+Mempelajari tentang Post model pada belajar laravel 8 Episode 7
+*/
 ?>
+
 
 <?php
 
@@ -38,4 +45,4 @@ Route::get('/about', function () {
 Route::get('/blog', [PostController::class, 'index']);
 
 // halaman single post
-Route::get('posts/{slug}', [PostController::class, 'show']);
+Route::get('posts/{post:slug}', [PostController::class, 'show']);
