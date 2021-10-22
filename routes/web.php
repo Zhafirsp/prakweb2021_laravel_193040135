@@ -3,8 +3,8 @@
 Muhammad Zhafir Sunandy Pramana
 193040135
 https://github.com/Zhafirsp/prakweb2021_phpmvc_193040135
-Pertemuan 6 - 15 Oktover 2021
-Mempelajari tentang Post Category & Eloquent Relationship pada belajar laravel 8 Episode 8
+Pertemuan 7 - 22 Oktover 2021
+Mempelajari tentang Database Seeder, Factory Faker, N+1 Problem dan Redesign UI
 */
 ?>
 
@@ -14,6 +14,7 @@ Mempelajari tentang Post Category & Eloquent Relationship pada belajar laravel 8
 use App\Http\Controllers\PostController;
 use App\Models\Category;
 use App\Models\Post;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 
@@ -63,5 +64,12 @@ Route::get('/categories/{category:slug}', function (Category $category) {
         'title' => $category->name,
         'posts' => $category->posts,
         'category' => $category->name
+    ]);
+});
+
+Route::get('/authors/{author:username}', function (User $author) {
+    return view('posts', [
+        'title' => 'User Posts',
+        'posts' => $author->posts,
     ]);
 });
