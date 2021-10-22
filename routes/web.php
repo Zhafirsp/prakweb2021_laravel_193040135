@@ -4,7 +4,7 @@ Muhammad Zhafir Sunandy Pramana
 193040135
 https://github.com/Zhafirsp/prakweb2021_phpmvc_193040135
 Pertemuan 7 - 22 Oktover 2021
-Mempelajari tentang Database Seeder, Factory Faker, N+1 Problem dan Redesign UI
+Mempelajari tentang Database Seeder, Factory & Faker, N+1 Problem dan Redesign UI
 */
 ?>
 
