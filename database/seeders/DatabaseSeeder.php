@@ -34,18 +34,18 @@ class DatabaseSeeder extends Seeder
         User::factory(3)->create();
 
         Category::create([
-            'name' => 'Romance',
-            'slug' => 'romance'
-        ]);
-
-        Category::create([
             'name' => 'Horror',
             'slug' => 'horror'
         ]);
 
         Category::create([
-            'name' => 'Drama',
-            'slug' => 'drama'
+            'name' => 'Superhero',
+            'slug' => 'superhero'
+        ]);
+
+        Category::create([
+            'name' => 'Sport',
+            'slug' => 'Sport'
         ]);
 
         Post::factory(20)->create();
