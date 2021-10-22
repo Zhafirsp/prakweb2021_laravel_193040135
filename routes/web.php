@@ -31,13 +31,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('Home', [
-        "title" => "Home"
+        "title" => "Home",
+        'active' => 'home'
     ]);
 });
 
 Route::get('/about', function () {
     return view('about', [
         "title" => "About",
+        'active' => 'about',
         "name" => "Muhammad Zhafir",
         "email" => "193040135.muhammad@mail.unpas.ac.id",
         "image" => "Profile.jpg"
@@ -49,6 +51,7 @@ Route::get('/blog', [PostController::class, 'index']);
 
 // mengarah ke single post
 Route::get('posts/{post:slug}', [PostController::class, 'show']);
+
 
 // mengarah ke categories
 Route::get('/categories', function (Category $category) {
