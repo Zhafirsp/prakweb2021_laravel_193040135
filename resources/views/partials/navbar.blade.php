@@ -23,6 +23,12 @@
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
+      <ul class="navbar-nav"> {{-- tambah ms auto agar login dikanan jadi navbar-nav ms-auto --}}
+        <li class="nav-item">
+          <a href="/login" class="nav-link {{ ($active === "login") ? 'active' : '' }}">
+            <i class="bi bi-box-arrow-in-right"></i> Login</a>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>
