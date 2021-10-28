@@ -3,8 +3,8 @@
 Muhammad Zhafir Sunandy Pramana
 193040135
 https://github.com/Zhafirsp/prakweb2021_phpmvc_193040135
-Pertemuan 7 - 22 Oktover 2021
-Mempelajari tentang Database Seeder, Factory & Faker, N+1 Problem dan Redesign UI
+Pertemuan 8 - 29 Oktover 2021
+Mempelajari tentang Searching & Pagination, View Login & Registration, User Registration dan User Login & Middleware
 */
 ?>
 
@@ -62,19 +62,18 @@ Route::get('/categories', function (Category $category) {
     ]);
 });
 
-// mengarah ke kategori
-Route::get('/categories/{category:slug}', function (Category $category) {
-    return view('posts', [
-        'title' => "Post by Category : $category->name",
-        'active' => 'categories',
-        'posts' => $category->posts->load('category', 'author')
-    ]);
-});
+// Route::get('/categories/{category:slug}', function (Category $category) {
+//     return view('posts', [
+//         'title' => "Post by Category : $category->name",
+//         'active' => 'categories',
+//         'posts' => $category->posts->load('category', 'author')
+//     ]);
+// });
 
-Route::get('/authors/{author:username}', function (User $author) {
-    return view('posts', [
-        'title' => "Post by Author : $author->name",
-        'active' => 'categories',
-        'posts' => $author->posts->load('category', 'author'),
-    ]);
-});
+// Route::get('/authors/{author:username}', function (User $author) {
+//     return view('posts', [
+//         'title' => "Post by Author : $author->name",
+//         'active' => 'posts',
+//         'posts' => $author->posts->load('category', 'author'),
+//     ]);
+// });
