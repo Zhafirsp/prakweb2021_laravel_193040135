@@ -19,10 +19,6 @@
           <a class="nav-link {{ ($active === "categories") ? 'active' : '' }}" href="/categories">Categories</a>
         </li>
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
 
       <ul class="navbar-nav"> {{-- tambah ms auto agar login dikanan jadi navbar-nav ms-auto --}}
       @auth
