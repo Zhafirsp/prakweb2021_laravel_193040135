@@ -7,7 +7,7 @@
     <main class="form-registration">
       <img class="mb-2 mx-auto d-block" src="../../img/f.png" alt="logo" width="72" height="68">
       <h1 class="h3 mb-3 fw-normal text-center">Registration Form</h1>
-      <form action="/register" method="post">
+      <form action="/register" method="POST">
         @csrf
         <div class="form-floating">
           <input type="text" name="name" class="form-control rounded-top @error('name') is-invalid @enderror" id="name" placeholder="Name" required value="{{ old('name') }}">
